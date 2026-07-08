@@ -215,6 +215,99 @@ function enforceSkillTrigger(skill) {
 
 ---
 
+## FABEL5 HYBRID SKILL CREATION (MANDATORY)
+
+### Core Principle
+
+**All skills MUST be a hybrid of Fabel5 discipline AND existing agent rules.**
+
+Fabel5 is an ENHANCEMENT, not a replacement. Every skill must preserve its original domain-specific rules while integrating Fabel5 thinking.
+
+### Hybrid Skill Structure
+
+```markdown
+---
+name: "HCS [Skill Name]"
+description: "HCS [Description]"
+metadata:
+  author: "HCS"
+  version: "[version]"
+---
+
+# HCS [Skill Name]
+
+## Purpose
+[Original skill purpose — preserved as-is]
+
+## Core Capabilities
+[Original capabilities — preserved as-is]
+
+## Domain-Specific Rules
+[Original rules — preserved as-is]
+
+## Final Instructions
+[Merged instructions — original + Fabel5]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## FABEL5 DISCIPLINE (MANDATORY)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[Fabel5 section — enhances, doesn't replace]
+```
+
+### Fabel5 Integration Rules
+
+| Rule | Description |
+|------|-------------|
+| **Rule 1** | NEVER remove existing domain-specific rules |
+| **Rule 2** | Fabel5 section ADDS to existing rules |
+| **Rule 3** | Merge Final Instructions (original + Fabel5) |
+| **Rule 4** | Keep original skill structure intact |
+| **Rule 5** | Fabel5 enhances quality, doesn't change functionality |
+
+### Final Instructions Merging
+
+**Original Final Instructions** (domain-specific):
+```markdown
+## Final Instructions
+1. ALWAYS backup before migrations
+2. ALWAYS test migrations first
+3. ALWAYS use transactions
+4. ALWAYS document changes
+5. ALWAYS optimize queries
+```
+
+**Merged with Fabel5** (hybrid):
+```markdown
+## Final Instructions
+### Domain Rules
+1. ALWAYS backup before migrations
+2. ALWAYS test migrations first
+3. ALWAYS use transactions
+4. ALWAYS document changes
+5. ALWAYS optimize queries
+
+### Fabel5 Quality Rules
+6. Be skeptical — Find issues, don't confirm everything
+7. Be thorough — Check every claim
+8. Be honest — Say clearly if wrong
+9. Be specific — Provide exact findings
+10. Be constructive — Suggest fixes
+```
+
+### Validation Checklist
+
+Before deploying any skill, verify:
+
+- [ ] Original domain rules preserved
+- [ ] Fabel5 section added (not replacing)
+- [ ] Final Instructions merged (original + Fabel5)
+- [ ] No existing content removed
+- [ ] Skill structure intact
+- [ ] Fabel5 enhances quality
+
+---
+
 ## MULTI-PLATFORM SUPPORT
 
 ### Purpose
