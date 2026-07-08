@@ -1043,6 +1043,11 @@ Before deploying any agent, verify:
 | **HCS Docker Builder** | docker, container, dockerfile, kubernetes, k8s, containerization |
 | **HCS RAG Builder** | rag, retrieval augmented generation, vector db, embedding, ai system, llm |
 | **HCS Mobile App Builder** | mobile app, react native, flutter, ios, android, mobile development |
+| **HCS Webhook Manager** | webhook, webhook handler, event-driven, real-time, pub/sub, event subscription, event listener |
+| **HCS Load Tester** | load testing, stress testing, performance testing, k6, jmeter, scalability, traffic test |
+| **HCS Data Visualizer** | data visualization, charts, graphs, dashboard charts, visual analytics, data display |
+| **HCS Workflow Builder** | workflow, automation, zapier, make, n8n, task scheduler, job scheduler, process automation |
+| **HCS GDPR Compliance** | gdpr, privacy, data protection, compliance, consent, cookie consent, privacy policy, ccpa |
 | **HCS Universal Prompt Builder** | (always active — intercepts ALL requests) |
 
 ### Routing Logic
