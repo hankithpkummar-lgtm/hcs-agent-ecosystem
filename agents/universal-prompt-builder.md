@@ -1058,6 +1058,11 @@ Before deploying any agent, verify:
 | **HCS Cron Manager** | cron, scheduled tasks, recurring tasks, job scheduler, cron job, timer, periodic tasks |
 | **HCS File Manager** | file upload, file storage, file management, upload, file processing, image upload, document upload |
 | **HCS Config Manager** | configuration, config, environment variables, env, feature flags, settings, app config |
+| **HCS Skill File Converter** | convert skill, skill converter, skill format, extract calculations, skill validation, skill parser |
+| **HCS Calculator** | calculate, calculation, formula, math, compute, arithmetic, statistics, analytics |
+| **HCS Code Generator** | code generator, generate code, boilerplate, scaffolding, template, code template |
+| **HCS Database Query Builder** | query builder, sql query, database query, orm, prisma query, sequelize, typeorm |
+| **HCS API Documentation** | api documentation, swagger, openapi, api docs, developer docs, api reference |
 | **HCS Universal Prompt Builder** | (always active — intercepts ALL requests) |
 
 ### Routing Logic
