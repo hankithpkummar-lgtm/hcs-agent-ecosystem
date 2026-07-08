@@ -1053,6 +1053,11 @@ Before deploying any agent, verify:
 | **HCS Queue Manager** | job queue, background jobs, task queue, bull, bullmq, sidekiq, celery, queue processing |
 | **HCS Search Manager** | search, elasticsearch, algolia, meilisearch, full-text search, search functionality, search bar |
 | **HCS Notification Manager** | notifications, push notifications, email notifications, sms, alert, real-time notifications |
+| **HCS Error Handler** | error handling, error reporting, error recovery, exception, crash, bug, error tracking, sentry |
+| **HCS Rate Limiter** | rate limiting, throttle, rate limit, api limit, abuse prevention, ddos, request limiting |
+| **HCS Cron Manager** | cron, scheduled tasks, recurring tasks, job scheduler, cron job, timer, periodic tasks |
+| **HCS File Manager** | file upload, file storage, file management, upload, file processing, image upload, document upload |
+| **HCS Config Manager** | configuration, config, environment variables, env, feature flags, settings, app config |
 | **HCS Universal Prompt Builder** | (always active — intercepts ALL requests) |
 
 ### Routing Logic
