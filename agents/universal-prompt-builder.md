@@ -806,6 +806,21 @@ Before deploying any agent, verify:
 | **HCS Marketing Agent** | marketing, seo, content marketing, social media, email marketing, marketing strategy, marketing campaign, marketing plan |
 | **HCS Master Prompt Builder** | prompt, prompt engineering, prompt builder, optimize prompt, improve prompt, generate prompt, prompt template |
 | **HCS Content Rephraser** | rephrase, rewrite, paraphrase, reword, enhance content, improve content, upgrade content, elevate content, enrich content, research, deep research, web research, online research, investigate, expand content, add details, content expansion, improve report, enhance report, better report, report quality, content improvement, content optimization, better writing, content quality, improve writing, professional writing, formal writing, content enhancement, analyze and rephrase, research and enhance, implementation plan, content pipeline, content analysis, code analysis, website type adaptation, topic research, content architecture |
+| **HCS Database Manager** | database, db, migrate, migration, schema, sql, query, backup, restore, postgres, mysql, mongodb, supabase, firebase, prisma, drizzle, database design, data model |
+| **HCS API Builder** | api, rest api, graphql, websocket, endpoint, backend, server, express, fastify, nestjs, trpc, api design, api documentation, swagger, openapi |
+| **HCS Testing Automation** | test, testing, unit test, integration test, e2e, cypress, playwright, jest, vitest, pytest, test suite, code coverage, test generation |
+| **HCS Performance Optimizer** | performance, optimize, speed, fast, cache, lazy load, bundle, lighthouse, core web vitals, fcp, lcp, cls, performance optimization |
+| **HCS Security Auditor** | security, audit, vulnerability, penetration test, xss, csrf, sql injection, security scan, owasp, security hardening |
+| **HCS Documentation Generator** | documentation, docs, readme, api docs, technical docs, code documentation, jsdoc, typedoc, swagger documentation |
+| **HCS Monitoring** | monitoring, logging, metrics, alerting, observability, prometheus, grafana, datadog, sentry, logging setup |
+| **HCS Backup Manager** | backup, restore, disaster recovery, data protection, backup strategy, automated backup |
+| **HCS Cache Manager** | cache, caching, redis, cdn, memcached, invalidate cache, cache strategy, browser cache |
+| **HCS Internationalization** | i18n, internationalization, localization, l10n, translation, multi-language, locale, react-intl, next-intl |
+| **HCS Accessibility Auditor** | accessibility, a11y, wcag, screen reader, keyboard navigation, aria, accessible, wcag compliance |
+| **HCS Image Optimizer** | image optimization, image compression, thumbnail, responsive image, webp, avif, image processing |
+| **HCS Email Template Builder** | email template, email design, newsletter, transactional email, email marketing, react email, mjml |
+| **HCS Form Builder** | form builder, form creation, form validation, multi-step form, dynamic form, react hook form, formik |
+| **HCS Payment Integration** | payment, stripe, paypal, checkout, subscription, billing, invoice, payment gateway, payment processing |
 | **HCS Universal Prompt Builder** | (always active — intercepts ALL requests) |
 
 ### Routing Logic
