@@ -1038,6 +1038,11 @@ Before deploying any agent, verify:
 | **HCS Form Builder** | form builder, form creation, form validation, multi-step form, dynamic form, react hook form, formik |
 | **HCS Payment Integration** | payment, stripe, paypal, checkout, subscription, billing, invoice, payment gateway, payment processing |
 | **HCS Fabel5 Verifier** | verify, verify output, check work, audit, review, skeptic, evidence, proof, confirmed, inferred |
+| **HCS Code Reviewer** | code review, review code, pr review, pull request, code quality, review my code |
+| **HCS CI/CD Pipeline** | ci/cd, github actions, gitlab ci, pipeline, automation, workflow |
+| **HCS Docker Builder** | docker, container, dockerfile, kubernetes, k8s, containerization |
+| **HCS RAG Builder** | rag, retrieval augmented generation, vector db, embedding, ai system, llm |
+| **HCS Mobile App Builder** | mobile app, react native, flutter, ios, android, mobile development |
 | **HCS Universal Prompt Builder** | (always active — intercepts ALL requests) |
 
 ### Routing Logic
@@ -1090,6 +1095,11 @@ ANALYZE KEYWORDS
    - Admin Dashboard Builder has priority for "admin" + "dashboard" combinations
    - Deployer has priority for deployment-related keywords
    - Fabel5 Verifier has priority for "verify" + "audit" combinations
+   - Code Reviewer has priority for "code review" + "pr review" combinations
+   - CI/CD Pipeline has priority for "ci/cd" + "github actions" combinations
+   - Docker Builder has priority for "docker" + "container" combinations
+   - RAG Builder has priority for "rag" + "vector db" combinations
+   - Mobile App Builder has priority for "mobile app" + "react native" combinations
 
 4. **Auto-Trigger on Push/Commit/Deploy**
    - HCS Human Tester Agent auto-triggers on every push, commit, and deploy
