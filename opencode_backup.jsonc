@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "universal-prompt-builder",
+  "agents": {
+    "paths": ["~/.config/opencode/agents"]
+  },
+  "skills": {
+    "paths": ["~/.config/opencode/skills"]
+  }
+}

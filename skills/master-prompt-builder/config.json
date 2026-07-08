@@ -1,0 +1,74 @@
+{
+  "name": "master-prompt-builder",
+  "version": "1.0.0",
+  "description": "Lightweight auto-executing prompt builder that converts any natural language request into optimized, structured prompts and sends them directly to the coding model",
+  "author": "opencode",
+  "license": "MIT",
+  "compatibility": "opencode",
+  "categories": ["prompt-engineering", "automation", "coding", "ai", "opencode"],
+  "triggers": {
+    "primary": "prompt-builder",
+    "aliases": [
+      "build-prompt",
+      "convert-prompt",
+      "optimize-prompt",
+      "master-prompt",
+      "mpb",
+      "auto-prompt",
+      "prompt-engine"
+    ]
+  },
+  "settings": {
+    "auto_execute": true,
+    "complexity_threshold": "medium",
+    "route_architectural": true,
+    "default_model": "auto",
+    "fast_model": "gpt-3.5-turbo",
+    "standard_model": "claude-3-5-sonnet",
+    "reasoning_model": "gpt-4",
+    "max_complexity_for_auto": "complex"
+  },
+  "complexity_levels": {
+    "simple": {
+      "keywords": ["add", "change", "fix", "update", "rename", "move", "delete", "toggle", "button", "color", "text", "padding", "margin"],
+      "action": "auto-execute",
+      "model": "fast"
+    },
+    "medium": {
+      "keywords": ["create", "build", "component", "form", "page", "endpoint", "api", "search", "filter", "authentication"],
+      "action": "auto-execute",
+      "model": "standard"
+    },
+    "complex": {
+      "keywords": ["dashboard", "admin", "panel", "full", "system", "real-time", "webhook", "integration", "multi-user"],
+      "action": "auto-execute",
+      "model": "standard"
+    },
+    "architectural": {
+      "keywords": ["project", "rewrite", "microservices", "distributed", "migration", "platform", "infrastructure"],
+      "action": "route-to-pipeline",
+      "model": "reasoning"
+    }
+  },
+  "features": {
+    "intent_analysis": true,
+    "complexity_detection": true,
+    "requirement_expansion": true,
+    "constraint_generation": true,
+    "model_selection": true,
+    "auto_execution": true,
+    "smart_inference": true,
+    "error_handling": true
+  },
+  "templates": {
+    "simple": "SIMPLE_TEMPLATE",
+    "medium": "MEDIUM_TEMPLATE",
+    "complex": "COMPLEX_TEMPLATE"
+  },
+  "routing": {
+    "simple": "auto-execute",
+    "medium": "auto-execute",
+    "complex": "auto-execute",
+    "architectural": "route-to-universal-master-dev-agent-v3"
+  }
+}

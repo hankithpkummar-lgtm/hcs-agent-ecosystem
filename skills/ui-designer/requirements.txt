@@ -1,0 +1,20 @@
+# AutoDesigner Pro - Requirements
+# Core dependencies
+beautifulsoup4>=4.12.0
+watchdog>=3.0.0
+
+# Optional: For actual web search (replace with your preferred search API)
+# google-search-results>=2.4
+# requests>=2.31.0
+
+# Optional: For screenshot generation
+# playwright>=1.40.0
+# selenium>=4.15.0
+
+# Optional: For AI-powered design suggestions
+# openai>=1.0.0
+
+# Development
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0

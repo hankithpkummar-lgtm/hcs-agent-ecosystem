@@ -1,0 +1,75 @@
+{
+  "name": "OpenCode Skill Builder",
+  "version": "1.0.0",
+  "description": "Autonomous skill factory for designing, researching, generating, testing, deploying, updating, and maintaining OpenCode Skills",
+  "author": "opencode",
+  "license": "MIT",
+  "compatibility": "opencode",
+  "categories": ["development", "automation", "prompt-engineering", "ai", "opencode"],
+  "triggers": {
+    "primary": "skill-builder",
+    "aliases": [
+      "builder",
+      "create-skill",
+      "new-skill",
+      "edit-skill",
+      "update-skill",
+      "skill-manager",
+      "skill-factory"
+    ]
+  },
+  "settings": {
+    "auto_deploy": true,
+    "auto_document": true,
+    "auto_test": true,
+    "validate_before_deploy": true,
+    "preserve_customizations": true,
+    "skills_directory": "~/.config/opencode/skills/",
+    "versioning": "semantic",
+    "documentation_format": "markdown",
+    "testing_enabled": true,
+    "optimization_enabled": true
+  },
+  "features": {
+    "interview_protocol": true,
+    "requirement_expansion": true,
+    "research_engine": true,
+    "architecture_design": true,
+    "prompt_engineering": true,
+    "skill_generation": true,
+    "validation": true,
+    "testing": true,
+    "optimization": true,
+    "documentation": true,
+    "deployment": true,
+    "version_management": true,
+    "continuous_improvement": true
+  },
+  "templates": {
+    "skill_md": "SKILL.md",
+    "readme_md": "README.md",
+    "changelog_md": "CHANGELOG.md",
+    "config_json": "config.json",
+    "examples_md": "examples.md",
+    "prompts_md": "prompts.md"
+  },
+  "validation": {
+    "markdown": true,
+    "frontmatter": true,
+    "structure": true,
+    "syntax": true,
+    "variables": true,
+    "examples": true,
+    "links": true,
+    "completeness": true
+  },
+  "testing": {
+    "normal_input": true,
+    "edge_cases": true,
+    "invalid_input": true,
+    "empty_input": true,
+    "large_input": true,
+    "special_characters": true,
+    "failure_recovery": true
+  }
+}
