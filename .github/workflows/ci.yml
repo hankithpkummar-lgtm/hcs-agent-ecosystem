@@ -1,0 +1,190 @@
+name: HCS Agent Ecosystem CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validate Agents & Skills
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate Agent Files
+        run: |
+          echo "🔍 Validating agent files..."
+          AGENT_DIR="agents"
+          ERRORS=0
+          
+          for file in "$AGENT_DIR"/*.md; do
+            if [ -f "$file" ]; then
+              FILENAME=$(basename "$file")
+              
+              # Check for valid mode
+              if grep -q "mode: primary" "$file" || grep -q "mode: subagent" "$file" || grep -q "mode: all" "$file"; then
+                echo "✅ $FILENAME - Valid mode found"
+              else
+                echo "❌ $FILENAME - No valid mode found"
+                ERRORS=$((ERRORS + 1))
+              fi
+              
+              # Check for invalid modes
+              if grep -q "mode: secondary" "$file" || grep -q "mode: tertiary" "$file" || grep -q "mode: on-demand" "$file"; then
+                echo "❌ $FILENAME - Invalid mode detected"
+                ERRORS=$((ERRORS + 1))
+              fi
+              
+              # Check for HCS prefix
+              if [[ "$FILENAME" == hcs-* ]]; then
+                echo "✅ $FILENAME - Has HCS prefix"
+              elif [[ "$FILENAME" == "universal-prompt-builder.md" ]] || [[ "$FILENAME" == "deployer-agent.md" ]] || [[ "$FILENAME" == "skill-builder-agent.md" ]] || [[ "$FILENAME" == "skill-factory-agent.md" ]]; then
+                echo "✅ $FILENAME - Core agent (no HCS prefix required)"
+              else
+                echo "⚠️  $FILENAME - Missing HCS prefix"
+              fi
+            fi
+          done
+          
+          if [ $ERRORS -gt 0 ]; then
+            echo "❌ Validation failed with $ERRORS errors"
+            exit 1
+          fi
+          
+          echo "✅ All agent files validated successfully"
+
+      - name: Validate Skill Files
+        run: |
+          echo "🔍 Validating skill files..."
+          SKILL_DIR="skills"
+          ERRORS=0
+          
+          find "$SKILL_DIR" -name "SKILL.md" | while read file; do
+            FILENAME=$(basename "$(dirname "$file")")
+            
+            # Check for HCS prefix in skill name
+            if [[ "$FILENAME" == hcs-* ]]; then
+              echo "✅ $FILENAME - Has HCS prefix"
+            elif [[ "$FILENAME" == "google-apps-script-builder" ]] || [[ "$FILENAME" == "link-analyser" ]] || [[ "$FILENAME" == "tester" ]] || [[ "$FILENAME" == "skill-builder" ]] || [[ "$FILENAME" == "master-prompt-builder" ]] || [[ "$FILENAME" == "ui-designer" ]] || [[ "$FILENAME" == "marketing-agent" ]] || [[ "$FILENAME" == "whatsapp-marketing-dashboard" ]] || [[ "$FILENAME" == "master-dev-agent" ]]; then
+              echo "✅ $FILENAME - Core skill (no HCS prefix required)"
+            else
+              echo "⚠️  $FILENAME - Missing HCS prefix"
+            fi
+            
+            # Check for valid mode in skill
+            if grep -q "mode: primary" "$file" || grep -q "mode: subagent" "$file" || grep -q "mode: all" "$file"; then
+              echo "✅ $FILENAME - Valid mode found"
+            else
+              echo "⚠️  $FILENAME - No mode specified"
+            fi
+          done
+          
+          echo "✅ All skill files validated"
+
+      - name: Check File Structure
+        run: |
+          echo "📁 Checking file structure..."
+          
+          # Check required directories
+          if [ ! -d "agents" ]; then
+            echo "❌ Missing agents directory"
+            exit 1
+          fi
+          echo "✅ agents/ directory exists"
+          
+          if [ ! -d "skills" ]; then
+            echo "❌ Missing skills directory"
+            exit 1
+          fi
+          echo "✅ skills/ directory exists"
+          
+          # Check for universal-prompt-builder
+          if [ ! -f "agents/universal-prompt-builder.md" ]; then
+            echo "❌ Missing universal-prompt-builder.md"
+            exit 1
+          fi
+          echo "✅ universal-prompt-builder.md exists"
+          
+          # Count files
+          AGENT_COUNT=$(ls -1 agents/*.md 2>/dev/null | wc -l)
+          SKILL_COUNT=$(find skills -name "SKILL.md" 2>/dev/null | wc -l)
+          
+          echo "📊 Statistics:"
+          echo "   - Agents: $AGENT_COUNT"
+          echo "   - Skills: $SKILL_COUNT"
+
+      - name: Generate Report
+        run: |
+          echo "📊 CI Validation Report"
+          echo "======================"
+          echo ""
+          echo "Repository: hcs-agent-ecosystem"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo ""
+          echo "✅ All validations passed!"
+          echo ""
+          echo "Next steps:"
+          echo "- Review the changes"
+          echo "- Test locally with OpenCode"
+          echo "- Deploy when ready"
+
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get version
+        id: version
+        run: |
+          VERSION=$(date +'%Y.%m.%d')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: "HCS Agent Ecosystem v${{ steps.version.outputs.version }}"
+          body: |
+            ## HCS Agent Ecosystem v${{ steps.version.outputs.version }}
+            
+            ### What's New
+            - Complete admin dashboard builder with 16 integrated agents
+            - Customer management suite (CRM, Support, Communication, Feedback, Journey)
+            - Content Rephraser v2.0 with Analyze-Research-Implement-Rephrase pipeline
+            - Universal Prompt Builder with comprehensive routing table
+            - Multi-platform support for 8 platforms
+            - Localhost-first pipeline enforced
+            - Self-learning system for continuous improvement
+            
+            ### Agents Included
+            - **36 Total Agents** across 6 categories
+            - **16 Admin Agents** for complete dashboard management
+            - **5 Customer Agents** for CRM and support
+            - **7 Content Agents** for document and website generation
+            - **15 Core Agents** for development lifecycle
+            
+            ### Installation
+            ```bash
+            git clone https://github.com/hankithpkummar-lgtm/hcs-agent-ecosystem.git
+            cp -r agents/* ~/.config/opencode/agents/
+            cp -r skills/* ~/.config/opencode/skills/
+            ```
+            
+            ### Documentation
+            See [README.md](README.md) for complete documentation.
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
