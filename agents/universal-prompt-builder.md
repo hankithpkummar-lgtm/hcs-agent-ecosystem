@@ -1048,6 +1048,11 @@ Before deploying any agent, verify:
 | **HCS Data Visualizer** | data visualization, charts, graphs, dashboard charts, visual analytics, data display |
 | **HCS Workflow Builder** | workflow, automation, zapier, make, n8n, task scheduler, job scheduler, process automation |
 | **HCS GDPR Compliance** | gdpr, privacy, data protection, compliance, consent, cookie consent, privacy policy, ccpa |
+| **HCS State Manager** | state management, redux, zustand, context api, state, store, global state, jotai, recoil |
+| **HCS Migration Manager** | migration, database migration, schema migration, data migration, prisma migrate, alembic, flyway |
+| **HCS Queue Manager** | job queue, background jobs, task queue, bull, bullmq, sidekiq, celery, queue processing |
+| **HCS Search Manager** | search, elasticsearch, algolia, meilisearch, full-text search, search functionality, search bar |
+| **HCS Notification Manager** | notifications, push notifications, email notifications, sms, alert, real-time notifications |
 | **HCS Universal Prompt Builder** | (always active — intercepts ALL requests) |
 
 ### Routing Logic
