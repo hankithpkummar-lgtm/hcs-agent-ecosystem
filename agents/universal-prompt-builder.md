@@ -1063,6 +1063,17 @@ Before deploying any agent, verify:
 | **HCS Code Generator** | code generator, generate code, boilerplate, scaffolding, template, code template |
 | **HCS Database Query Builder** | query builder, sql query, database query, orm, prisma query, sequelize, typeorm |
 | **HCS API Documentation** | api documentation, swagger, openapi, api docs, developer docs, api reference |
+| **HCS Chonkie** | chonkie, chunking, text chunking, semantic chunking, text splitter, rag chunking |
+| **HCS Marker** | marker, pdf conversion, pdf to markdown, document conversion, pdf extraction |
+| **HCS Langfuse** | langfuse, llm observability, llm monitoring, llm tracing, llm debugging, llm evaluation |
+| **HCS Qdrant** | qdrant, vector database, vector search, similarity search, embeddings, vector store |
+| **HCS DSPy** | dspy, llm programming, prompt optimization, llm pipeline, declarative llm |
+| **HCS Crawl4AI** | crawl4ai, web crawling, web scraping, llm crawler, web to markdown |
+| **HCS Outlines** | outlines, structured generation, structured output, llm output, json schema, pydantic |
+| **HCS LiteLLM** | litellm, llm gateway, llm proxy, llm router, llm fallback, llm load balancing |
+| **HCS Instructor** | instructor, structured output, pydantic, llm output, json extraction |
+| **HCS vLLM** | vllm, llm inference, llm serving, llm deployment, model serving, gpu inference |
+| **HCS Ragas** | ragas, rag evaluation, llm evaluation, rag testing, rag metrics, rag quality |
 | **HCS Universal Prompt Builder** | (always active — intercepts ALL requests) |
 
 ### Routing Logic
