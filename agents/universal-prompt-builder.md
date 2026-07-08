@@ -1067,6 +1067,7 @@ Before deploying any agent, verify:
 | **HCS Marker** | marker, pdf conversion, pdf to markdown, document conversion, pdf extraction |
 | **HCS Langfuse** | langfuse, llm observability, llm monitoring, llm tracing, llm debugging, llm evaluation |
 | **HCS Qdrant** | qdrant, vector database, vector search, similarity search, embeddings, vector store |
+| **HCS Graphify** | graphify, knowledge graph, code graph, graph visualization, community detection, graphrag, dependency graph |
 | **HCS DSPy** | dspy, llm programming, prompt optimization, llm pipeline, declarative llm |
 | **HCS Crawl4AI** | crawl4ai, web crawling, web scraping, llm crawler, web to markdown |
 | **HCS Outlines** | outlines, structured generation, structured output, llm output, json schema, pydantic |
